@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TempConvert - Result</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">TempConvert</div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="converter.html" class="active">Converter</a>
+            <a href="about.html">About</a>
+        </div>
+    </nav>
+
+
+    <!-- Result Page -->
+    <main class="result-page">
+
+        <div class="result-container">
+
+            <p class="small-title">CONVERSION COMPLETE</p>
+
+            <h1>Your Result</h1>
+
+            <p class="original-value" id="originalValue"></p>
+
+
+            <!-- Results -->
+            <div class="results-grid">
+
+                <div class="result-box">
+
+                    <h3>Celsius</h3>
+
+                    <p id="celsiusResult">--</p>
+
+                    <span>°C</span>
+
+                </div>
+
+
+                <div class="result-box">
+
+                    <h3>Fahrenheit</h3>
+
+                    <p id="fahrenheitResult">--</p>
+
+                    <span>°F</span>
+
+                </div>
+
+
+                <div class="result-box">
+
+                    <h3>Kelvin</h3>
+
+                    <p id="kelvinResult">--</p>
+
+                    <span>K</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Buttons -->
+            <div class="result-buttons">
+
+                <a href="converter.html" class="main-button">
+                    Convert Again
+                </a>
+
+                <a href="index.html" class="secondary-button">
+                    Back to Home
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 TempConvert | Temperature Converter</p>
+    </footer>
+
+
+    <script>
+
+        // Get values from URL
+        const params = new URLSearchParams(window.location.search);
+
+        const value = params.get("value");
+        const unit = params.get("unit");
+
+        const celsius = params.get("celsius");
+        const fahrenheit = params.get("fahrenheit");
+        const kelvin = params.get("kelvin");
+
+
+        // Check if result data exists
+        if (
+            value === null ||
+            unit === null ||
+            celsius === null ||
+            fahrenheit === null ||
+            kelvin === null
+        ) {
+
+            document.querySelector(".result-container").innerHTML = `
+                <h1>No Result Found</h1>
+
+                <p class="converter-description">
+                    Please perform a temperature conversion first.
+                </p>
+
+                <a href="converter.html" class="main-button">
+                    Go to Converter
+                </a>
+            `;
+
+        } else {
+
+            document.getElementById("originalValue").textContent =
+                `${value}° ${unit}`;
+
+            document.getElementById("celsiusResult").textContent =
+                celsius;
+
+            document.getElementById("fahrenheitResult").textContent =
+                fahrenheit;
+
+            document.getElementById("kelvinResult").textContent =
+                kelvin;
+        }
+
+    </script>
+
+</body>
+</html>
