@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MintCalc - Result</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">MintCalc</div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="calculator.html" class="active">Calculator</a>
+            <a href="about.html">About</a>
+        </div>
+    </nav>
+
+
+    <main class="result-page">
+
+        <div class="result-container">
+
+            <p class="small-title">CALCULATION COMPLETE</p>
+
+            <h1>Your Result</h1>
+
+            <p class="original-expression" id="originalExpression">
+                Your calculation will appear here.
+            </p>
+
+
+            <div class="answer-card">
+
+                <p>Answer</p>
+
+                <h2 id="resultValue">--</h2>
+
+            </div>
+
+
+            <div class="result-buttons">
+
+                <a href="calculator.html" class="main-button">
+                    Calculate Again
+                </a>
+
+                <a href="index.html" class="secondary-button">
+                    Back to Home
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 MintCalc | Oasis Infobyte Internship</p>
+    </footer>
+
+
+    <script>
+
+        const params = new URLSearchParams(window.location.search);
+
+        const expression = params.get("expression");
+        const result = params.get("result");
+
+        if (expression === null || result === null) {
+
+            document.getElementById("originalExpression").textContent =
+                "No calculation found.";
+
+            document.getElementById("resultValue").textContent =
+                "--";
+
+        } else {
+
+            document.getElementById("originalExpression").textContent =
+                expression;
+
+            document.getElementById("resultValue").textContent =
+                result;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MintCalc - Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">MintCalc</div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="calculator.html" class="active">Calculator</a>
+            <a href="about.html">About</a>
+        </div>
+    </nav>
+
+
+    <main class="calculator-page">
+
+        <div class="calculator-container">
+
+            <p class="small-title">MINTCALC</p>
+
+            <h1>Calculator</h1>
+
+            <p class="description">
+                Enter your calculation using the buttons below.
+            </p>
+
+
+            <div class="calculator">
+
+                <input
+                    type="text"
+                    id="display"
+                    class="display"
+                    placeholder="0"
+                    readonly
+                >
+
+
+                <div class="buttons">
+
+                    <button class="clear" onclick="clearDisplay()">
+                        AC
+                    </button>
+
+                    <button class="delete" onclick="deleteLast()">
+                        DEL
+                    </button>
+
+                    <button class="operator" onclick="appendValue('%')">
+                        %
+                    </button>
+
+                    <button class="operator" onclick="appendValue('/')">
+                        ÷
+                    </button>
+
+
+                    <button onclick="appendValue('7')">7</button>
+                    <button onclick="appendValue('8')">8</button>
+                    <button onclick="appendValue('9')">9</button>
+
+                    <button class="operator" onclick="appendValue('*')">
+                        ×
+                    </button>
+
+
+                    <button onclick="appendValue('4')">4</button>
+                    <button onclick="appendValue('5')">5</button>
+                    <button onclick="appendValue('6')">6</button>
+
+                    <button class="operator" onclick="appendValue('-')">
+                        −
+                    </button>
+
+
+                    <button onclick="appendValue('1')">1</button>
+                    <button onclick="appendValue('2')">2</button>
+                    <button onclick="appendValue('3')">3</button>
+
+                    <button class="operator" onclick="appendValue('+')">
+                        +
+                    </button>
+
+
+                    <button class="zero" onclick="appendValue('0')">
+                        0
+                    </button>
+
+                    <button onclick="appendValue('.')">
+                        .
+                    </button>
+
+                    <button class="equal" onclick="calculateResult()">
+                        =
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <p class="calculator-note">
+                Your final answer will open on a separate result page.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 MintCalc | Oasis Infobyte Internship</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
