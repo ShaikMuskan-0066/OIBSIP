@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #faf7ff;
+    color: #342044;
+    line-height: 1.6;
+}
+
+/* Navigation */
+.navbar {
+    background: #b58be8;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #4d2875;
+}
+
+/* Home Hero */
+.hero {
+    min-height: 85vh;
+    padding: 70px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    background: linear-gradient(135deg, #faf7ff, #eadcff);
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.small-title {
+    color: #9867cf;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.1;
+    color: #54317d;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #b58be8;
+}
+
+.hero p {
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+
+.main-button {
+    display: inline-block;
+    background: #b58be8;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    background: #9867cf;
+    transform: translateY(-2px);
+}
+
+/* Hero Card */
+.hero-card {
+    width: 350px;
+    background: white;
+    padding: 35px 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(181, 139, 232, 0.25);
+}
+
+.portrait {
+    width: 145px;
+    height: 145px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eadcff;
+    color: #9867cf;
+    font-size: 42px;
+    font-weight: bold;
+    border: 8px solid #f4ecff;
+}
+
+.hero-card h2 {
+    color: #54317d;
+    margin-bottom: 5px;
+}
+
+.hero-card > p {
+    color: #9867cf;
+    font-weight: bold;
+}
+
+.quote-box {
+    background: #f4ecff;
+    color: #68478d;
+    padding: 18px;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* Common Section */
+.section {
+    padding: 70px 8%;
+    text-align: center;
+    background: white;
+}
+
+.section h2 {
+    color: #54317d;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.section-text {
+    max-width: 850px;
+    margin: 0 auto 40px;
+    font-size: 18px;
+}
+
+/* Feature Grid */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.feature-box {
+    padding: 30px 25px;
+    background: #faf7ff;
+    border-radius: 15px;
+    border: 1px solid #eadcff;
+}
+
+.feature-box h3 {
+    color: #9867cf;
+    margin-bottom: 12px;
+}
+
+/* Inner Pages */
+.page-section {
+    min-height: 85vh;
+    padding: 70px 10%;
+    background: linear-gradient(135deg, #faf7ff, #eadcff);
+}
+
+.page-section h1 {
+    color: #54317d;
+    font-size: 42px;
+    margin-bottom: 30px;
+}
+
+.page-section > p:not(.small-title) {
+    max-width: 950px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Achievements */
+.achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.achievement-box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(181, 139, 232, 0.15);
+}
+
+.achievement-box h2 {
+    color: #b58be8;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.achievement-box h3 {
+    color: #54317d;
+    margin-bottom: 12px;
+}
+
+.achievement-box p {
+    color: #68478d;
+}
+
+/* Timeline */
+.timeline {
+    max-width: 850px;
+    margin-top: 35px;
+    border-left: 4px solid #b58be8;
+    padding-left: 30px;
+}
+
+.timeline-item {
+    position: relative;
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(181, 139, 232, 0.15);
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -44px;
+    top: 30px;
+    width: 18px;
+    height: 18px;
+    background: #b58be8;
+    border: 4px solid #faf7ff;
+    border-radius: 50%;
+}
+
+.timeline-year {
+    color: #9867cf;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.timeline-content h3 {
+    color: #54317d;
+    margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+    background: #54317d;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-card {
+        width: 100%;
+        max-width: 380px;
+    }
+
+    .feature-grid,
+    .achievement-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .page-section h1 {
+        font-size: 32px;
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .section,
+    .page-section {
+        padding: 50px 20px;
+    }
+}
