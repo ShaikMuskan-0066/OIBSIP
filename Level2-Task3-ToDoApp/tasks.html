@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tasks - TaskFlow</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <div class="logo">
+            TaskFlow
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="tasks.html" class="active">Tasks</a>
+            <a href="about.html">About</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Tasks Section -->
+    <section class="tasks-section">
+
+        <div class="tasks-card">
+
+            <p class="small-title">
+                YOUR PRODUCTIVITY SPACE
+            </p>
+
+            <h1>My Daily Tasks</h1>
+
+            <p class="description">
+                Add, complete and manage your tasks.
+            </p>
+
+
+            <!-- Add Task -->
+            <div class="input-area">
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Enter a new task..."
+                >
+
+                <button onclick="addTask()" class="add-button">
+                    Add Task
+                </button>
+
+            </div>
+
+
+            <!-- Task Summary -->
+            <div class="task-summary">
+
+                <div class="summary-box">
+                    <h3 id="totalTasks">0</h3>
+                    <p>Total Tasks</p>
+                </div>
+
+                <div class="summary-box">
+                    <h3 id="completedTasks">0</h3>
+                    <p>Completed</p>
+                </div>
+
+                <div class="summary-box">
+                    <h3 id="pendingTasks">0</h3>
+                    <p>Pending</p>
+                </div>
+
+            </div>
+
+
+            <!-- Task List -->
+            <ul id="taskList" class="task-list"></ul>
+
+
+            <!-- Clear Button -->
+            <button onclick="clearCompleted()" class="clear-button">
+                Clear Completed Tasks
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 TaskFlow | Oasis Infobyte Internship
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
